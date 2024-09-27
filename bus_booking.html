@@ -1,0 +1,60 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Ticket Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Bus Ticket Booking</h2>
+
+        <!-- Start Destination Dropdown -->
+        <label for="start-destination">Start Destination:</label>
+        <select id="start-destination">
+            <option value="mumbai">Mumbai</option>
+            <option value="pune">Pune</option>
+            <option value="solapur">Solapur</option>
+            <option value="latur">Latur</option>
+        </select>
+
+        <!-- End Destination Dropdown -->
+        <label for="end-destination">End Destination:</label>
+        <select id="end-destination">
+            <option value="mumbai">Mumbai</option>
+            <option value="pune">Pune</option>
+            <option value="solapur">Solapur</option>
+            <option value="latur">Latur</option>
+        </select>
+
+        <button type="button">Book Ticket</button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bus Ticket Booking</title>
+    <link rel="stylesheet" href="styles.css"> 
+</head>
+<body>
+<div class="front">
+    <header>
+        <h1>Bus Ticket Booking System</h1>
+    </header>
+
+   <form id="booking-form" action="booking.php" method="POST">
+            <label for="start-destination">Start Destination:</label>
+            <select id="start-destination">
+                <option value="mumbai">Mumbai</option>
+                <option value="pune">Pune</option>
+                <option value="solapur">Solapur</option>
+                <option value="latur">Latur</option>
+            </select>
+
+            <label for="end-destination">End Destination:</label>
+            <select id="end-destination">
+                <option value="mumbai">Mumbai</option>
+                <option value="pune">Pune</option>
+                <option value="solapur">Solapur</option>
+                <option value="latur">Latur</option>
+            </select>
+
+            <h4>Seat Selection:</h4>
+            <div class="seat-layout">
+            <div class="seat available" data-type="single" data-seat-number="1">
+                Single 1
+                <input type="hidden" name="seat_id" value="1">
+                <input type="hidden" name="seat_type" value="single">
+            </div>
+            <div class="seat available" data-type="double" data-seat-number="2">
+                Double 2
+                <input type="hidden" name="seat_id" value="2">
+                <input type="hidden" name="seat_type" value="double">
+            </div>
+            <div class="seat available" data-type="single" data-seat-number="3">
+                Single 3
+                <input type="hidden" name="seat_id" value="3">
+                <input type="hidden" name="seat_type" value="single">
+            </div>
+            <div class="seat available" data-type="double" data-seat-number="4">
+                Double 4
+                <input type="hidden" name="seat_id" value="4">
+                <input type="hidden" name="seat_type" value="double">
+            </div>
+        </div>
+		
+        <button class="btn" type="submit">Book Now</button>
+    </form>			
+    <footer>
+        <p>&copy; 2024 Online Bus Ticket Booking System</p>
+    </footer>
+
+    <script src="script.js"></script> 
+</div>
+</body>
+</html>
+

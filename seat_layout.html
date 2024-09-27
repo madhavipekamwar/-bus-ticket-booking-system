@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bus Seat Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        .seat-layout {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            max-width: 400px;
+            margin: auto;
+        }
+        .seat {
+            padding: 20px;
+            background-color: #f0f0f0;
+            text-align: center;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .seat.single {
+            background-color: #d1e7dd; /* Greenish for single seats */
+        }
+        .seat.double {
+            background-color: #f8d7da; /* Pinkish for double seats */
+        }
+        .seat.booked {
+            background-color: #6c757d; /* Gray for booked seats */
+            cursor: not-allowed;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Bus Seat Layout</h2>
+
+    <div class="seat-layout">
+        <!-- Single Seats -->
+        <div class="seat single" data-type="single" data-seat-number="1">Single 1</div>
+        <div class="seat single" data-type="single" data-seat-number="2">Single 2</div>
+
+        <!-- Double Seats -->
+        <div class="seat double" data-type="double" data-seat-number="3">Double 3</div>
+        <div class="seat double" data-type="double" data-seat-number="4">Double 4</div>
+
+        <!-- Add more seats -->
+        <div class="seat single" data-type="single" data-seat-number="5">Single 5</div>
+        <div class="seat double" data-type="double" data-seat-number="6">Double 6</div>
+    </div>
+
+    <script>
+        const seats = document.querySelectorAll('.seat');
+
+        seats.forEach(seat => {
+            seat.addEventListener('click', () => {
+                if (!seat.classList.contains('booked')) {
+                    seat.classList.toggle('selected');
+                    alert(`Seat ${seat.dataset.seatNumber} (${seat.dataset.type}) selected`);
+                } else {
+                    alert('This seat is already booked.');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
